@@ -21,7 +21,7 @@ function History() {
       <header>
         <h1>History</h1>
         <nav>
-          <a href="/insights">INSIGHTS</a>
+          <a href="/insights">Insights</a>
           <a href="/expense-tracker">Expense Tracker</a>
           <a href="/history">History</a>
           <a href="/about-us">About Us</a>

@@ -17,7 +17,7 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/insights" element={<Insights />} />
+        <Route className="insights" path="/insights" element={<Insights />} />
         <Route path="/expense-tracker" element={<ExpenseTracker expensesList={expensesList} setExpensesList={setExpensesList} />} />
         <Route path="/history" element={<History expensesList={expensesList} />} />
         <Route path="/about-us" element={<AboutUs />} />

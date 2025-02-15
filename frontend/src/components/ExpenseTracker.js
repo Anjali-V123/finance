@@ -42,7 +42,7 @@ function ExpenseTracker() {
       <header>
         <h1>Expense Tracker</h1>
         <nav>
-          <a href="/insights">INSIGHTS</a>
+          <a href="/insights">Insights</a>
           <a href="/expense-tracker">Expense Tracker</a>
           <a href="/history">History</a>
           <a href="/about-us">About Us</a>
@@ -57,14 +57,14 @@ function ExpenseTracker() {
             value={expense}
             onChange={(e) => setExpense(e.target.value)}
             required
-          />
+          /><br/>
           <input
             type="text"
             placeholder="Enter description"
             value={description}
             onChange={(e) => setDescription(e.target.value)}
             required
-          />
+          /><br/>
           <button type="submit">Add Expense</button>
         </form>
         <h3>Expenses List</h3>
