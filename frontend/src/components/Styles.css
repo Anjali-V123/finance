@@ -6,6 +6,7 @@ header {
   }
   
   header nav a {
+    font-family: Arial;
     color: white;
     text-decoration: none;
     margin: 0 10px;
@@ -46,7 +47,6 @@ h1 {
 }
 
 nav a {
-  font-family: Arial;
   margin: 10px;
   text-decoration: none;
   color: white;

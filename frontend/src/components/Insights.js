@@ -38,7 +38,7 @@ function Insights() {
   return (
     <div>
       <header>
-        <h1>INSIGHTS:</h1>
+        <h1>INSIGHTS</h1>
         <nav>
           <a href="/insights">Insights</a>
           <a href="/expense-tracker">Expense Tracker</a>
