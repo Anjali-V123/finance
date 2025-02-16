@@ -27,3 +27,12 @@ Installation and Setup:
        . Run backend using node server.js
        . Run frontend using npm start
     c) Open http://localhost:3000 in browser
+
+API Endpoints:
+1)POST/signup -> Registers a new user by saving their email and hashed password to the database
+2)POST/login -> Authenticates a user and returns a JWT token if valid credentials are provided
+3)GET/expenses -> Retrieves all expenses related to the authenticated user
+4)POST/expenses -> Adds a new expense for the authenticated user
+
+Contributions:
+Backend -> storing details in the MongoDB database and verifying login and signup details
