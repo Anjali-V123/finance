@@ -57,4 +57,5 @@ API Endpoints:
 4)POST/expenses -> Adds a new expense for the authenticated user
 
 Contributions:
+
 Backend -> storing details in the MongoDB database and verifying login and signup details
