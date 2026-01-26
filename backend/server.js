@@ -5,7 +5,8 @@ const jwt = require("jsonwebtoken");
 const cors = require("cors");
 
 // Environment Variables
-const PORT = 5000;
+//const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 require('dotenv').config(); // Load environment variables from .env file
 
 const JWT_SECRET = process.env.JWT_SECRET;
@@ -14,6 +15,8 @@ const MONGO_URI = process.env.MONGO_URI;
 const app = express();
 app.use(cors());
 app.use(express.json());
+
+app.get("/", (req, res) => res.send("API running"));
 
 // MongoDB Connection
 mongoose.connect(MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
