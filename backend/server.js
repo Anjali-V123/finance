@@ -13,7 +13,16 @@ const JWT_SECRET = process.env.JWT_SECRET;
 const MONGO_URI = process.env.MONGO_URI;
 
 const app = express();
-app.use(cors());
+//app.use(cors());
+
+app.use(cors({
+  origin: [
+    "https://financemanagementapp.vercel.app",
+    "http://localhost:3000"
+  ],
+  credentials: true
+}));
+
 app.use(express.json());
 
 app.get("/", (req, res) => res.send("API running"));
