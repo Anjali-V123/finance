@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./Styles.css";
+const API = process.env.REACT_APP_API_URL;
 
 function History() {
   const [expensesList, setExpensesList] = useState([]);
@@ -7,7 +8,7 @@ function History() {
   useEffect(() => {
     const fetchExpenses = async () => {
       const token = localStorage.getItem("token");
-      const response = await fetch("http://localhost:5000/expenses", {
+      const response = await fetch(`${API}/expenses`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       const data = await response.json();
