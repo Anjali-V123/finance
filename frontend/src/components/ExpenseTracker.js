@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import "./Styles.css";
+const API = process.env.REACT_APP_API_URL;
+
 
 function ExpenseTracker() {
   const [expense, setExpense] = useState("");
@@ -8,7 +10,7 @@ function ExpenseTracker() {
 
   const fetchExpenses = async () => {
     const token = localStorage.getItem("token");
-    const response = await fetch("http://localhost:5000/expenses", {
+    const response = await fetch(`${API}/expenses`, {
       headers: { Authorization: `Bearer ${token}` },
     });
     const data = await response.json();
@@ -19,7 +21,7 @@ function ExpenseTracker() {
     event.preventDefault();
     const token = localStorage.getItem("token");
 
-    const response = await fetch("http://localhost:5000/expenses", {
+    const response = await fetch(`${API}/expenses`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

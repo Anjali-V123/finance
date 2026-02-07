@@ -1,17 +1,19 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+const API = process.env.REACT_APP_API_URL;
+
 
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
-  const API_BASE = process.env.REACT_APP_API_BASE_URL || "http://localhost:5000";
+  //const API_BASE = process.env.REACT_APP_API_BASE_URL || "http://localhost:5000";
 
   const handleLogin = async (event) => {
     event.preventDefault();
     try {
-      const response = await fetch(`${API_BASE}/login`, {
+      const response = await fetch(`${API}/login`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, password }),
